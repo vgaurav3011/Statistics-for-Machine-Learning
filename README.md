@@ -78,3 +78,21 @@ When we mine useful patterns after structuring this data, we get the data in for
 5. Trimmed Mean: The average of all the values after dropping a fixed number of extreme values.
 6. Robust: Not sensitive to extreme values.
 7. Outlier: A datapoint which exhibits different behaviour from the majority of data points in the population.
+
+- Mean = $^1/_N$ $\sum_{i=1}^{n} x_i$
+where N = Total number of records or Population
+	    n = Total number of records in Sample
+	    and n is a subset of N
+	
+- Note: Mean is known to be prone to outlier or extreme values
+For example, we are calculating the average of incomes of persons sitting in a restaurant with lowest income being $100 and highest being $500, and mean income is nearly about $300. Suddenly, Bill Gates enter the restaurant and takes a seat. His income is $1 billion (assume), so now the new mean will be approximately a billion which is way higher than incomes of others in the same dataset or population. Hence, mean is sensitive to outliers.
+
+- Thus, we use a trimmed mean as described which drops these extreme values.
+Trimmed Mean = $^1/(_N-2p)$ $\sum_{i=p+1}^{n-p}x_i$ where p are the extreme values on both sides of the data.
+
+- Weighted Mean = $\sum_{i=1}^{n}w_i.x_i$ / $\sum_{i=1}^{n}w_i$ is used when the data does not represent all the groups equally and some variables are more intrinsic than other variables and need to be given higher weights as a result.
+- Median: 
+	- Sort the values in ascending order
+	- If the number of terms is odd, then take the middle value
+	- If the number of terms is even, then take the average of the middle values
+	Median is a robust estimate because it is not affected by outliers

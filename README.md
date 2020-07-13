@@ -79,7 +79,7 @@ When we mine useful patterns after structuring this data, we get the data in for
 6. Robust: Not sensitive to extreme values.
 7. Outlier: A datapoint which exhibits different behaviour from the majority of data points in the population.
 
-- Mean = $^1/_N$ $\sum_{i=1}^{n} x_i$
+Mean = <img src="https://render.githubusercontent.com/render/math?math=$^1/_N$"><img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{n} x_i">
 where N = Total number of records or Population
 	    n = Total number of records in Sample
 	    and n is a subset of N
@@ -88,9 +88,9 @@ where N = Total number of records or Population
 For example, we are calculating the average of incomes of persons sitting in a restaurant with lowest income being $100 and highest being $500, and mean income is nearly about $300. Suddenly, Bill Gates enter the restaurant and takes a seat. His income is $1 billion (assume), so now the new mean will be approximately a billion which is way higher than incomes of others in the same dataset or population. Hence, mean is sensitive to outliers.
 
 - Thus, we use a trimmed mean as described which drops these extreme values.
-Trimmed Mean = $^1/(_N-2p)$ $\sum_{i=p+1}^{n-p}x_i$ where p are the extreme values on both sides of the data.
+Trimmed Mean = <img src="https://render.githubusercontent.com/render/math?math=$^1/(_N-2p)$"> <img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=p + 1}^{n-p}x_i$"> where p are the extreme values on both sides of the data.
 
-- Weighted Mean = $\sum_{i=1}^{n}w_i.x_i$ / $\sum_{i=1}^{n}w_i$ is used when the data does not represent all the groups equally and some variables are more intrinsic than other variables and need to be given higher weights as a result.
+- Weighted Mean = <img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{n}w_i.x_i$"> / <img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{n}w_i$"> is used when the data does not represent all the groups equally and some variables are more intrinsic than other variables and need to be given higher weights as a result.
 - Median: 
 	- Sort the values in ascending order
 	- If the number of terms is odd, then take the middle value

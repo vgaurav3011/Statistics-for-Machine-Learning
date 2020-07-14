@@ -123,3 +123,18 @@ Variance = ![equation](https://latex.codecogs.com/gif.latex?%5Csum_%7Bi%3D1%7D%5
 A robust estimate of variability is the median absolute deviation (MAD). 
 MAD = Median(![equation](https://latex.codecogs.com/gif.latex?%7Cx_%7B1%7D%20-%20m%24%7C%2C%20%7C%24x_%7B2%7D%20-%20m%24%7C%2C%20....%20%2C%20%7C%24x_%7Bn%7D%20-%20m%7C))
 where Standard Deviation > Mean Absolute Deviation
+The range is given as follows:
+![equation](https://latex.codecogs.com/gif.latex?x_%7Bmax%7D%20-%20x_%7Bmin%7D)
+
+Further, we divide the data into four quarters as follows:
+1. Lower Quartile (Q1): It is the quarter of data with the lowest values.
+2. Upper Quartile (Q4): It is the quarter of data with highest values.
+3. Interquartile Range (Q3-Q1): The difference between the 75th percentile and 25th percentile of the data.
+
+IQR is the middle half of the data, which is not susceptible to outliers making it most suitable for dealing with skewed distributions.
+
+When you have a skewed distribution, the median is a better measure of central tendency, and it makes sense to pair it with either the interquartile range or other percentile-based ranges because all of these statistics divide the dataset into groups with specific proportions.
+
+For normally distributed data, or even data that aren’t terribly skewed, using the tried and true combination reporting the mean and the standard deviation is the way to go. This combination is by far the most common. You can still supplement this approach with percentile-base ranges as you need.
+
+> Notebook for Measures of Variability: [Link](https://github.com/vgaurav3011/Statistics-for-Machine-Learning/blob/master/notebooks/002-Measure-of-Variability.ipynb)

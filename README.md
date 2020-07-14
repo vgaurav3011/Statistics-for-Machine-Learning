@@ -96,3 +96,30 @@ Trimmed Mean = <img src="https://render.githubusercontent.com/render/math?math=$
 	- If the number of terms is odd, then take the middle value
 	- If the number of terms is even, then take the average of the middle values
 	Median is a robust estimate because it is not affected by outliers
+	
+
+> Notebook for Measures of Central Tendency: [Link](https://github.com/vgaurav3011/Statistics-for-Machine-Learning/blob/master/notebooks/001-Measures-of-Central-Tendency.ipynb)
+
+## Estimates of Variability and Percentiles
+1. Deviations: The difference between the observed values and estimates of location.
+2. Variance: The sum of squared deviations from the mean divided by n-1 where n is the number of data points.
+3. Standard Deviation: Measure of dispersion within the data which is square root of variance.
+4. Range: The difference between the maximum and minimum value in the data.
+5. Percentile: The value of P percent of the values take the value less than or this and (100-P) percent takes on this value or more.
+6. Interquartile Range: The difference between 75th percentile and the 25th percentile is the IQR.
+
+Mean Absolute Deviation = 1/n ![equation](https://latex.codecogs.com/gif.latex?%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Cx_%7Bi%7D%20-%20%5Cbar%7Bx%7D%7C)
+
+Standard Deviation = ![equation](https://latex.codecogs.com/gif.latex?%5Csqrt%7B%28%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dx_%7Bi%7D%20-%20%5Cbar%7Bx%7D%29%5E2/n-1%7D)
+
+Variance = ![equation](https://latex.codecogs.com/gif.latex?%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%28x-%5Cbar%7Bx%7D%29%5E2/n-1)
+
+## Degrees of Freedom
+
+1. We make use of n-1 terms and not all of n terms in calculating variance.
+2. If we use n terms in the denominator we end up having  a biased estimate. However, if we divide by n-1 terms, the standard deviation becomes an unbiased estimate.
+3. The reason for the biased estimate in case of n terms are considered is that the mean also considers n number of terms and is present in the formula.
+
+A robust estimate of variability is the median absolute deviation (MAD). 
+MAD = Median(![equation](https://latex.codecogs.com/gif.latex?%7Cx_%7B1%7D%20-%20m%24%7C%2C%20%7C%24x_%7B2%7D%20-%20m%24%7C%2C%20....%20%2C%20%7C%24x_%7Bn%7D%20-%20m%7C))
+where Standard Deviation > Mean Absolute Deviation

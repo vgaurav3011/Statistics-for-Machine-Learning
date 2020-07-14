@@ -138,3 +138,28 @@ When you have a skewed distribution, the median is a better measure of central t
 For normally distributed data, or even data that aren’t terribly skewed, using the tried and true combination reporting the mean and the standard deviation is the way to go. This combination is by far the most common. You can still supplement this approach with percentile-base ranges as you need.
 
 > Notebook for Measures of Variability: [Link](https://github.com/vgaurav3011/Statistics-for-Machine-Learning/blob/master/notebooks/002-Measure-of-Variability.ipynb)
+
+## Exploring Data Distributions and Visualizations
+Pandas provides a simple five-point summary of the data that gives insight to different aspects:
+1. X(smallest)
+2. First Quartile (Q1)
+3. Median (Q2)
+4. Third Quartile (Q3)
+5. X(largest)
+This is captured most beautifully by a visualization of distribution called Boxplot.
+- Boxplot: It is a quick way to visualize the distribution of the data with the five point summary.
+	- A value is considered to be an outlier if it falls at 1.5 times the interquartile range below Q1 or above Q3.
+	- The boxplot of a symmetric distribution has the median in the middle with equally spaced out data on both the sides
+![alt-text](https://raw.githubusercontent.com/vgaurav3011/Statistics-for-Machine-Learning/master/images/boxplot.jpg)
+
+- Frequency Table or Histograms: It is a frequency distribution of the data, and they are stacked together using bins. If they are too small, the result will be granular and the ability to see bigger pictures are lost.
+	- X-axis: Bins
+	- Y-axis: Count
+	- They show the exact data distribution along with the variance in the data which is absent in boxplot.
+![alt-text](https://raw.githubusercontent.com/vgaurav3011/Statistics-for-Machine-Learning/master/images/histogram.png)
+- Quantile Plot: Displays all of the data (allowing the user to assess both the overall behavior and unusual occurrences)
+	- Plots quantile information
+	- For a data x(i) data sorted in increasing order, f(i) indicates that approximately 100 f(i) % of the data are below or equal to the value x(i)
+![alt-text](https://raw.githubusercontent.com/vgaurav3011/Statistics-for-Machine-Learning/master/images/quantile_plot.png)
+- Scatter Plot: It shows the direct relationship between the dependent and independent variables in the data.
+![alt-text](https://raw.githubusercontent.com/vgaurav3011/Statistics-for-Machine-Learning/master/images/scatter.png)

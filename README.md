@@ -163,3 +163,29 @@ This is captured most beautifully by a visualization of distribution called Boxp
 ![alt-text](https://raw.githubusercontent.com/vgaurav3011/Statistics-for-Machine-Learning/master/images/quantile_plot.png)
 - Scatter Plot: It shows the direct relationship between the dependent and independent variables in the data.
 ![alt-text](https://raw.githubusercontent.com/vgaurav3011/Statistics-for-Machine-Learning/master/images/scatter.png)
+
+## Correlations and Covariance
+
+Correlations refers to simple idea of determining relationship between a set of features, and it can be simply seen as the following possibilities:
+1. A feature increases, with corresponding increase in other feature.
+2. A feature decreases with corresponding decrease in other feature.
+3. A feature increases, with corresponding decrease in other feature.
+4. A feature decreases, with corresponding increase in other feature.
+And yes we might also have no effect of changing values of one feature on another which means that both the features being compared are independent of each other.
+
+- Correlation quantifies how much two variables are associated with each other, but does not give the exact direction of this association. 
+- It can simply be defined as a measurement of association between two variables.
+- It is highly sensitive to outliers.
+- It can only capture linear relationships between two variables.
+
+A fun example can be the amount of time you study and your GPA. A natural belief of people would be the more you study, the more marks should you get and hence a higher GPA, but most surveys and samples prove that if you study too much then your GPA is actually low compared to candidates who study for lesser hours but score more. Now, this is ofcourse subject to interpreting that there are many other factors associated with the example and not to mention the variance involved in the concentration of different students. 
+But, the idea of correlation is to find unusual patterns, say as weird as the cost of a car wash and the time it takes to buy soda from the car wash station! That is when the actual data analysis comes into picture.
+
+- Positive Correlation Coefficient: When a variable increases with corresponding increase in the other variable it is being compared with, the coefficient of correlation becomes positive.
+- Negative Correlation Coefficient: When a variable increases with corresponding decrease in the other variable or vice versa then the coefficient of correlation becomes negative.
+- Zero Correlation: There is no relationship between both the variables and they are independent of each other.
+![alt-text](https://raw.githubusercontent.com/vgaurav3011/Statistics-for-Machine-Learning/master/images/correlation.png)
+Pearson Coefficient of Correlation = ![equation](https://latex.codecogs.com/gif.latex?%5Cfrac%7B%28x_%7Bi%7D%20-%20%5Cbar%7Bx%7D%29.%28y_%7Bi%7D%20-%20%5Cbar%7By%7D%29%7D%7B%5Csigma_%7B1%7D.%5Csigma_%7B2%7D%7D)
+However, actually we have Covariance as the numerator of this coefficient.
+Covariance tells us how much variability is present in the data from the mean and how much far is the data point from the mean. It does not tell us about the direction of the relationship but provides a quantifying measurement of the strength of association.
+Covariance(x,y) = ![equation](https://latex.codecogs.com/gif.latex?%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%28x_%7Bi%7D%20-%20%5Cbar%7Bx%7D%29.%28y_%7Bi%7D%20-%20%5Cbar%7By%7D%29)

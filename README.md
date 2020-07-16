@@ -188,6 +188,9 @@ But, the idea of correlation is to find unusual patterns, say as weird as the co
 Pearson Coefficient of Correlation = ![equation](https://latex.codecogs.com/gif.latex?%5Cfrac%7B%28x_%7Bi%7D%20-%20%5Cbar%7Bx%7D%29.%28y_%7Bi%7D%20-%20%5Cbar%7By%7D%29%7D%7B%5Csigma_%7B1%7D.%5Csigma_%7B2%7D%7D)
 
 
+![alt-text](https://raw.githubusercontent.com/vgaurav3011/Statistics-for-Machine-Learning/master/images/heatmap.png)
+
+
 <br/>However, actually we have Covariance as the numerator of this coefficient.
 Covariance tells us how much variability is present in the data from the mean and how much far is the data point from the mean. It does not tell us about the direction of the relationship but provides a quantifying measurement of the strength of association.<br/>
 Covariance(x,y) = ![equation](https://latex.codecogs.com/gif.latex?%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%28x_%7Bi%7D%20-%20%5Cbar%7Bx%7D%29.%28y_%7Bi%7D%20-%20%5Cbar%7By%7D%29)<br/>

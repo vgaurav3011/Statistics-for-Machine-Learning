@@ -194,3 +194,27 @@ Pearson Coefficient of Correlation = ![equation](https://latex.codecogs.com/gif.
 <br/>However, actually we have Covariance as the numerator of this coefficient.
 Covariance tells us how much variability is present in the data from the mean and how much far is the data point from the mean. It does not tell us about the direction of the relationship but provides a quantifying measurement of the strength of association.<br/>
 Covariance(x,y) = ![equation](https://latex.codecogs.com/gif.latex?%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%28x_%7Bi%7D%20-%20%5Cbar%7Bx%7D%29.%28y_%7Bi%7D%20-%20%5Cbar%7By%7D%29)<br/>
+
+## Hypothesis Testing
+
+Hypothesis is an assumption about the population parameter to test whether the sample selected is a generic representation of the entire population. Hypothesis Testing simply refers to the process of decision making in order to accept or reject the hypothesis. 
+
+### Why is Hypothesis required for analyzing data?
+
+The population can be a very large dataset, hence making it computationally expensive to train on the entire data at once, hence we make use of sampling. Sampling is the process of selecting a subset of the data, which is an appropriate representative of the entire data so that when we run a model on this subset it can generate results that can be generalized on the entire population. There are two types of sampling available for any data:
+1. Probability based Sampling
+2. Non-Probability based Sampling
+
+![alt-text](https://raw.githubusercontent.com/vgaurav3011/Statistics-for-Machine-Learning/master/images/sampling.png)
+- Probability Sampling refers to the technique of sampling where each data point is given an equal chance of being selected in the sample from the population. 
+	- Simple Random Sampling refers to randomly selecting data points out of the population for a sample and trying out it for making a generalized model.
+	- Systematic Sampling is the technique in which the first data point will be selected randomly followed by selecting points at 'n' intervals each.
+	- Stratified Random Sampling refers to dividing the data into multiple subsets or groups and then selecting a random data point from each subset of the data to form the sample.
+	- Cluster Sampling refers to treating each subset of data as a cluster and selecting that cluster as a sampling unit for analysis.
+	- 
+- Non-Probability based sampling does not give an equal chance to every data point 
+	
+	- Convenience Sampling refers to the easiest method of sampling where we select data points based on their availability status and willingness to participate in an experiment.
+	- Quota sampling refers to using a general criterion to filter out sample points and select those points from the population which fulfills the criterion.
+	- Judgement Sampling refers to selecting the points by yourself and has the chance to be biased.
+	- Snowball Sampling allows the points to randomly select their  own further points for the sample from the population.

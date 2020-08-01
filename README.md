@@ -218,3 +218,76 @@ The population can be a very large dataset, hence making it computationally expe
 	- Quota sampling refers to using a general criterion to filter out sample points and select those points from the population which fulfills the criterion.
 	- Judgement Sampling refers to selecting the points by yourself and has the chance to be biased.
 	- Snowball Sampling allows the points to randomly select their  own further points for the sample from the population.
+There are two basis for a hypothesis formulation:
+1. The NULL Hypothesis (![equation](https://latex.codecogs.com/gif.latex?H_%7B0%7D)): This states that the assumption made yields favourable results only by pure random chance.
+2. The Alternate Hypothesis (![equation](https://latex.codecogs.com/gif.latex?H_%7Ba%7D)): This states that the assumption made yields favourable results not by a pure random chance but by non-random cause.
+
+Our goal is to reject the ![equation](https://latex.codecogs.com/gif.latex?H_%7B0%7D) and accept the ![equation](https://latex.codecogs.com/gif.latex?H_%7Ba%7D).
+There are many statisticians who argue that there is nothing called as 'Acceptance' because we cannot accept a NULL Hypothesis, there is either rejection of ![equation](https://latex.codecogs.com/gif.latex?H_%7B0%7D) or we fail to reject the ![equation](https://latex.codecogs.com/gif.latex?H_%7B0%7D).
+From a simple perspective, the process of Hypothesis Testing has four broad steps:
+
+1. State the ![equation](https://latex.codecogs.com/gif.latex?H_%7B0%7D) and ![equation](https://latex.codecogs.com/gif.latex?H_%7B1%7D) which must be mutually exclusive from each other which means that if one of them is True then the other one is definitely False.
+2. Make an analysis plan, and describe how to evaluate the null hypothesis. The evaluation often focuses on a single test statistic.
+3. Analyze the sample data using the appropriate chosen statistic whether it is mean, median or something else.
+4. Interpret the results, as usual and apply the decision rule to the result to decide whether the task failed to reject the null hypothesis or rejected it successfully proving the alternative hypothesis.
+
+Hypothesis Testing  plays an integral part in deciding whether the assumptions made by the data scientist are correct or just random by chance on any data regarding patterns present in them. We come across different errors based on decision taken. In a summary, we can say that hypothesis testing is a kind of inferential statistics, where we try to prove an assumption for the entire population through a generated subset called sample of observations from within the population. A good example to understand the idea of hypothesis testing is as follows:
+Consider the example of trying to determine the percentage of community spread, in Bangalore with the rising number of COVID-19 cases. The Health Minister of Karnataka says that on average there is a 75% spread in infection cases. However, we cannot simply agree without proof, so here we are! 
+
+![equation](https://latex.codecogs.com/gif.latex?H_%7B0%7D): The mean percentage of COVID-19 spread is 75% in Bangalore, Karnataka
+![equation](https://latex.codecogs.com/gif.latex?H_%7B1%7D)/![equation](https://latex.codecogs.com/gif.latex?H_%7Ba%7D): The mean percentage of COVID-19 spread is not 75% in Bangalore, Karnataka
+where ![equation](https://latex.codecogs.com/gif.latex?H_%7B1%7D) is mean percentage is not equal to 75%
+
+Now, we will perform the Z-Test:<br/>
+Z = ![equation](https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cbar%20x%20-%20%5Cmu%7D%7B%5Cfrac%7B%5Csigma%7D%7B%5Csqrt%28n%29%7D%7D)
+where ![equation](https://latex.codecogs.com/gif.latex?%5Cbar%20x) = Sample Mean, ![equation](https://latex.codecogs.com/gif.latex?%5Cmu)=Hypothesized Population Mean, ![equation](https://latex.codecogs.com/gif.latex?%5Csigma)=Standard Error/Deviation and n=Sample Size
+Through this, we are standardizing the sample mean we got. **_So if the sample mean is close enough to hypothesized mean , then Z will be close to 0._** and we will have to accept the Null Hypothesis. Now, coming to how to reject it!
+So, we have to determine how big Z-value should be in order to reject the Null Hypothesis!
+Thus, we carry out a two-tailed distribution test, **_ which is generally used when the hypothesis involves sign of equality or inequality_**
+![alt-text](https://raw.githubusercontent.com/vgaurav3011/Statistics-for-Machine-Learning/master/images/Tail-Tests.png)
+Hence, we can define the two tailed test as follows:
+**_“A two-tailed test is a test of a statistical hypothesis, where the region of rejection is on both sides of the sampling distribution and the region of acceptance is in the middle_**.”
+The shaded parts in the given tests, are the **Rejection Regions**.
+The threshold values depends on the **Significance Level** taken for the hypothesis to be true. For example, we have ![equation](https://latex.codecogs.com/gif.latex?%5Calpha)=0.05 then the threshold values on two sides of a 2-tailed test will be 0.05/2 = 0.025 and then look this value in the Z-table, we find that Z-value is 1.96 and -1.96 so that will be the threshold on either sides. 
+**Therefore, the value of Z we get from the test is lower than -1.96, or higher than 1.96, we will reject the null hypothesis. Otherwise, we will accept it.**
+Now, it can turn out that your hypothesis results will be wrong in terms of decision making. Thus, in general, two types of errors can arise:
+1. Type-I Error (**FALSE POSITIVE**): This error arises when the Null Hypothesis is **TRUE** and we **REJECT** it.
+2. Type-II Error (**FALSE NEGATIVE**): This error arises when the Null Hypothesis is **FALSE** and we **ACCEPT** it. 
+  For example, 
+  Consider the case of the following hypotheses:
+  ![equation](https://latex.codecogs.com/gif.latex?H_%7B0%7D): The patient diagnosed has COVID-19
+  ![equation](https://latex.codecogs.com/gif.latex?H_%7Ba%7D): The patient diagnosed does not have COVID-19
+  In this case we have two possibility of errors, 
+- The person has COVID-19 and is diagnosed to not have COVID-19 (FALSE POSITIVE or Type-1). 
+- The person does not have COVID-19 and is diagnosed to have COVID-19 (FALSE NEGATIVE or Type-2).
+
+Now, before further we have to understand the concepts of Point Estimate in terms of Sample Mean (![equation](https://latex.codecogs.com/gif.latex?%5Cbar%20x)) and Population Mean (![equation](https://latex.codecogs.com/gif.latex?%5Cmu)) with context to Hypothesis Testing.
+- Point Estimate: It is located exactly in the middle of the confidence interval, so for example if we are talking about the Sample Mean, it is in the middle of the range covered for calculating the Population mean, similarly the same goes for the standard deviation of the sample with respect to that of the population.
+- Confidence Interval: The range in which the population parameter is expected to be. It is defined as 1-![equation](https://latex.codecogs.com/gif.latex?%5Calpha) where it indicates the confidence of finding the parameter within that range. 
+For example, consider the case that the number of COVID-19 cases in a containment zone are 15. The local medical body is 90% confident to find the cases in that zone which means that ![equation](https://latex.codecogs.com/gif.latex?%5Calpha)=10%.
+
+Also, we can say that the reader is interested in pursuing machine learning later in general considering you are looking for Statistical Insights to build concept, and I am 90% confident that you will learn machine learning after going through this curated content! 
+
+Now, coming to the concept where we do not want to perform hypothesis testing on the basis of predefined significance levels, and hence we make use of a p-value. This is the smallest significance value that can still reject the NULL hypothesis. 
+
+**HOW TO CALCULATE THE P-VALUE?**
+We calculate p-value, by the following formulae after calculating the Z-value of the sample:
+- One-Tailed Test: (1 - Z-value corresponding in table) for one side
+- Two-Tailed Test: (1 - Z-value corresponding in table)*2 for two sides
+For example, consider that we get a Z-value of 3.71, then look up in the Z-table, we get 0.4991! Hence, we get p-value = 1-0.499 which is approximately 0.5 > 0.025 that is the assumed ![equation](https://latex.codecogs.com/gif.latex?%5Calpha) value, now we cannot reject the NULL hypothesis, since the p-value is not higher than the ![equation](https://latex.codecogs.com/gif.latex?%5Calpha) value.
+Thus, for rejecting the NULL Hypothesis, the p-value should be smaller than the significance level otherwise it fails to reject the NULL Hypothesis.
+
+So, let us see a simple difference between Z-Test and T-Test:
+
+- Z-test is used when the sample test size is greater than 30, while T-test is more suitable for sizes less than 30.
+- Z-test is used when we know the Population Standard Deviation, T-test is used when we do not know the Population Standard Deviation.
+- Z-test is based on calculating the Z-value, while T-test takes account of the sample size too.
+
+So, before we proceed any further let us be clear about all these tests and when to use them:
+- **ONE-SAMPLE TESTS: SAMPLE is being compared to POPULATION**
+- **TWO-SAMPLE TESTS: TWO SAMPLES are being compared to each other**
+- **PAIRED-SAMPLE TESTS: When the two samples being compared have variables that cannot be controlled**
+- **F-TESTS: When more than two groups are being compared to each other**
+Also, in a nutshell:
+- t-Test: Any statistical hypothesis test in which the test statistic follows a Student’s t-distribution if the null hypothesis is supported.
+- z-test: Any statistical test for which the distribution of the test statistic under the null hypothesis can be approximated by a normal distribution. 

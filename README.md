@@ -291,3 +291,50 @@ So, before we proceed any further let us be clear about all these tests and when
 Also, in a nutshell:
 - t-Test: Any statistical hypothesis test in which the test statistic follows a Student’s t-distribution if the null hypothesis is supported.
 - z-test: Any statistical test for which the distribution of the test statistic under the null hypothesis can be approximated by a normal distribution. 
+
+### Simple Linear Regression
+
+The Simple Linear Regression is a method to determine linear relationship between a dependent variable and independent variable(s).
+In simple words, if the independent variable increases then dependent variable also increases, and vice versa if it decreases. 
+
+The major **difference** between correlation and regression is that the correlation is a measure of strength of association between two variables, while regression quantifies this relationship.
+
+A few key terms in describing the regression are:
+
+- Independent Variables: The variables used to predict the response variable.
+- Dependent Variable: The variable which has to be predicted using independent variables.
+- Record: The vector of predictor and outcome values for a specific individual or case.
+- Intercept: The predicted variable when X=0 on the line (b0).
+- Regression Coefficient: The slope of the regression line (b1).
+- Fitted Values: The estimates (y(i)) found on the regression lines.
+- Residuals: The difference between the observed and predicted values.
+- Least Squares: The method of fitting a regression line by minimizing the sum of squared residuals.
+
+The Regression Equation is as follows:
+
+y = b0 + b1.x
+
+If the fitted values do not predict correctly (that is they do not fall on the line of regression) we compute residuals, which is used to be minimized in order to compute an extra error term explicitly.
+
+y = b0 + b1.x + e
+
+
+Residual Sum of Squares = ![alt-text](http://www.sciweavers.org/upload/Tex2Img_1597047226/render.png)
+
+
+The method of minimizing the sum of residual squares is called the Ordinary Least Squares Regression (OLSR).
+
+![alt-text](https://raw.githubusercontent.com/vgaurav3011/Statistics-for-Machine-Learning/master/images/OLSR.png)
+
+Till now, we discussed how the linear relationships are determined using regression and there is a non-linear aspect to regression to this.
+
+**Profiling**: It is the term used to describe the relationship between prediction and explanation. A regression model can act as a predictive model and give us the values which are needed as the prediction of input features. However, it does not give us an explicit explanation of why this prediction is correct or not. This is done by our own knowledge.
+
+For example, we can predict the number of purchases based on the number of ad clicks on a website but in the end it is our marketing knowledge that will tell us whether the sales increased and was profitable or not and not the other way around. This is called Profiling.
+
+Hence, we can conclude that A regression model that fits the data well is set up such that changes in X lead to changes in Y. However, by itself, the regression equation does not prove the direction of causation. Conclusions about causation must come from a broader context of understanding about the relationship.
+
+Thus, we come across three types of modelling in total as follows:
+1. Predictive Modelling: The process of applying a statistical model or data mining algorithm to data for the purpose of predicting new or future  observations. 
+2. Descriptive Modelling: Fitting a regression model can be descriptive if it is used for capturing the association between the dependent and independent variables rather than for causal inference or for prediction.
+3. Explanation Modelling: A regression model can be explanatory if it is used to associate models for getting the causality behind the relationships of the dependent and independent variables.

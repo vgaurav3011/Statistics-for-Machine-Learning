@@ -338,3 +338,24 @@ Thus, we come across three types of modelling in total as follows:
 1. Predictive Modelling: The process of applying a statistical model or data mining algorithm to data for the purpose of predicting new or future  observations. 
 2. Descriptive Modelling: Fitting a regression model can be descriptive if it is used for capturing the association between the dependent and independent variables rather than for causal inference or for prediction.
 3. Explanation Modelling: A regression model can be explanatory if it is used to associate models for getting the causality behind the relationships of the dependent and independent variables.
+
+
+### Multiple Linear Regression
+
+When multiple predictors are combined to get a single strong predictor as regression line then we refer to it as multiple linear regression.
+
+It can be simply be represented as:
+
+y = b0 + b1.x + b2.x2 + b3.x3 +.....+ bnxn + e where e is the root mean square error term.
+
+Key Terms for Multiple Linear Regression:
+
+1. Root Mean Squared Error (RMSE): The average squared error of regression is called Root Mean Square Error (RMSE).
+![alt-text](https://raw.githubusercontent.com/vgaurav3011/Statistics-for-Machine-Learning/master/images/rmse-1.webp)
+2. Residual Square Error: The same as the root mean squared error, but adjusted for degrees
+of freedom.
+3. R-Squared: The proportion of variance explained by the model, from 0 to 1.
+4. t-statistic: The coefficient of predictor variable divided by the standard error, is a metric used to measure the statistical importance of the independent variables with respect to the response variable.
+5. Weighted Regression: The terms have different weights that is number multiplied with the input predictors in order to get a regression line.
+
+If we replace the denominator term in RMSE with n-p-1 then it is called Residual Standard Error and it is the basis for degrees of freedom.
